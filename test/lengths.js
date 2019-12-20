@@ -105,4 +105,11 @@ tests['fathm to m'] = function () {
     , 'Expected: ' + expected +', Actual: ' + actual);
 };
 
+tests['m to μm'] = function () {
+  var expected = 1000000
+    , actual = convert(1).from('m').to('μm');
+  assert.ok( percentError(expected, actual) < ACCURACY
+    , 'Expected: ' + expected +', Actual: ' + actual);
+};
+
 module.exports = tests;
