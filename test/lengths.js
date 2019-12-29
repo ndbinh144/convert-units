@@ -112,4 +112,11 @@ tests['m to μm'] = function () {
     , 'Expected: ' + expected +', Actual: ' + actual);
 };
 
+tests['m to nm'] = function () {
+  var expected = 1000000000
+    , actual = convert(1).from('m').to('nm');
+  assert.ok( percentError(expected, actual) < ACCURACY
+    , 'Expected: ' + expected +', Actual: ' + actual);
+};
+
 module.exports = tests;
